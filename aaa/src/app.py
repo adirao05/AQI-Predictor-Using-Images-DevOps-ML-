@@ -8,7 +8,7 @@ from model_cnn import CNNModel as CNN
 @st.cache_resource
 def load_model():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    MODEL_PATH = os.path.join(BASE_DIR, '..', 'aaa', 'outputs', 'models', 'cnn_aqi.pth')
+    MODEL_PATH = os.path.join(BASE_DIR, '..', 'outputs', 'models', 'cnn_aqi.pth')
     model = CNN()
     model.load_state_dict(torch.load(MODEL_PATH, map_location="cpu", weights_only=True))
     model.eval()
