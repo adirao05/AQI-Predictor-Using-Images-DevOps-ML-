@@ -12,7 +12,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'github-creds',
-                    url: 'https://github.com/YOUR_GITHUB_USERNAME/aqi-devops-project.git'
+                    url: 'https://github.com/adirao05/AQI-Predictor-Using-Images-DevOps-ML-'
             }
         }
 
