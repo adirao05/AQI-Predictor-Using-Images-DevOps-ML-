@@ -4,10 +4,8 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-# Install CPU-only PyTorch first (prevents pip from pulling GPU version)
 RUN pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 
-# Install remaining dependencies
 RUN pip install -r requirements.txt
 
 COPY . .
