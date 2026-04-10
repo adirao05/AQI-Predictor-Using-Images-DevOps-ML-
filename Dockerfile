@@ -4,9 +4,7 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-RUN pip install --default-timeout=300 --retries 5 torch torchvision --index-url https://download.pytorch.org/whl/cpu
-
-RUN pip install --default-timeout=300 -r requirements.txt
+RUN pip install --default-timeout=600 --retries 10 -r requirements.txt
 
 COPY . .
 
