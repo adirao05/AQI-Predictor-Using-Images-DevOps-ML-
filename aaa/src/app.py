@@ -32,7 +32,7 @@ def get_aqi_label(aqi):
 
 st.title("AQI Prediction from Image")
 
-uploaded_file = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
+uploaded_file = st.file_uploader("Upload an image.", type=["jpg", "png", "jpeg"])
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("RGB")
